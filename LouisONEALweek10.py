@@ -58,10 +58,10 @@ def create_offense_by_zip(fileList):
 
 def MainProgram():
     try:
-        fileName = input("whats filename?")
+        fileName = input("Enter the name of the crime data file ==> ")
         MyReports = read_in_file(fileName)
     except:
-        print("bad input")
+        print("Could not find the file specified")
         MainProgram()
     
     MonthDict = create_reported_month_dict(MyReports)
