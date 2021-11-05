@@ -43,15 +43,6 @@ def create_offense_dict(fileList):
 
 def create_offense_by_zip(fileList):
     OffenseDict = {}
-    # for line in fileList:
-    #     if line[7] in OffenseDict:
-    #         if OffenseDict[line[7]].has_key(line[13]):
-    #             OffenseDict[line[7]] = OffenseDict[line[7]] + 1
-    #         else:
-    #             OffenseDict[line[7]] = {line[7] : 1}
-    #     else:
-    #         OffenseDict[line[7]] = 1
-    # return OffenseDict
     for line in fileList:
         if line[7] not in OffenseDict:
             OffenseDict[line[7]] = {}
@@ -88,16 +79,8 @@ def MainProgram():
     print("{} offenses by Zip Code".format(target))
     print( "{0:20} {1}".format("Zip Code", "# Offenses"))  
     print("====================================")  
-    # print(zipOffenses)
-    for k, v in zipOffenses[target].items():
-        # print(k, v)        
+    for k, v in zipOffenses[target].items():  
         print( "{0:20} {1}".format(k,v))
-    #print(create_offense_dict(MyReports))
-    #print(create_offense_by_zip(MyReports))
-    #print(create_reported_date_dict(MyReports))
-    #print(create_reported_month_dict(MyReports))
-
-
 
 if __name__ == "__main__":
     MainProgram()
